@@ -27,7 +27,7 @@ JsonDocument secret = JsonDocument.Parse(response.SecretString);
 string host = secret.RootElement.GetProperty("host").GetString();
 string username = secret.RootElement.GetProperty("username").GetString();
 string password = secret.RootElement.GetProperty("password").GetString();
-string dbname = "zapatillas";
+string dbname = secret.RootElement.GetProperty("dbname").GetString();
 
 string connectionString =
     $"Server={host};Port=3306;Database={dbname};User={username};Password={password};";
