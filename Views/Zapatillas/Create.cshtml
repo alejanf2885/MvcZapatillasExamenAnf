@@ -1,0 +1,19 @@
+﻿@model MvcZapatillasExamenAnf.Models.Zapatilla
+
+<h2>Nueva Zapatilla</h2>
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input type="text" name="Nombre" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Descripcion</label>
+        <input type="text" name="Descripcion" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Imagen</label>
+        <input type="file" name="imagen" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/Zapatillas/Index" class="btn btn-secondary">Volver</a>
+</form>

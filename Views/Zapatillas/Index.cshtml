@@ -1,0 +1,29 @@
+﻿@model List<Zapatilla>
+
+<h2>Zapatillas</h2>
+<a href="/Zapatillas/Create" class="btn btn-primary">Nueva Zapatilla</a>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Zapatilla z in Model)
+        {
+            <tr>
+                <td>@z.Nombre</td>
+                <td>@z.Descripcion</td>
+                <td>
+                    @if (z.Imagen != null)
+                    {
+                        <img src="@z.Imagen" width="100" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
